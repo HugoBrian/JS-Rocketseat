@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Módulo 1</title>
+</head>
+
+<body style="background-color: #333333;">
+
+    <script>
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function RetornaEndereco(endereco2) {
+            return `O usuário mora em ${endereco2.cidade} / ${endereco2.uf}, no bairro ${endereco2.bairro}, na rua
+            ${endereco2.rua} com n° ${endereco2.numero}.`;
+        }
+
+        function pares(x, y) {
+            for (i = x; i <= y; i++) {
+                if (i % 2 == 0) {
+                    console.log(i)
+                }
+            }
+        }
+
+        function temHabilidade(skills) {
+            for (i in skills) {
+
+                return skills.indexOf("Javascript") >= 0 ? true : false;
+
+                /*
+                if(skills[i] == "Javascript"){
+                    return true;
+                }
+                */
+            }
+            return false;
+        }
+
+        function experiencia(anos) {
+            if (anos < 0) {
+                return "Comece agora";
+            }
+            if (anos >= 0 && anos <= 1) {
+                return 'Iniciante';
+            }
+            if (anos > 1 && anos <= 3) {
+                return 'Intermediário';
+            }
+            if (anos > 3 && anos <= 6) {
+                return 'Avançado';
+            }
+            if (anos >= 7) {
+                return 'Jedi Master';
+            }
+        }
+
+        var usuarios = [{
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        function listaSkills(listaUsuarios){
+            let texto = '';
+            for(let i of listaUsuarios){
+                texto += 'O ' + i.nome + ' possui as habilidades: ' + i.habilidades.join(', ') + '\n';
+            }
+            return texto;
+        }
+
+        //1
+        //console.log(RetornaEndereco(endereco));
+
+        //2
+        //pares(32, 321);
+
+        //3
+        //var skills = ["Javascript", "ReactJS", "React Native"];
+        //console.log(temHabilidade(skills)); // true ou false
+
+        //4
+        //var anosEstudo = 99;
+        //console.log(experiencia(anosEstudo));
+
+        //5
+        console.log(listaSkills(usuarios));
+    </script>
+</body>
+
+</html>
