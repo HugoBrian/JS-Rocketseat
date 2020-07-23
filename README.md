@@ -1,1 +1,1 @@
-Repositório dos exercícios de desafios do curso Starter da Rocketseat.
+Repositório dos exercícios e desafios do curso Starter da Rocketseat.
