@@ -51,6 +51,5 @@ function deleteTodo(pos) {
 }
 
 function saveToStorege() {
-
     localStorage.setItem('list-todos', JSON.stringify(todos));  
 }
