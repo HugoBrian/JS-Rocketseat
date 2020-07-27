@@ -4,6 +4,7 @@ var list = document.querySelector('ul#listRepos');
 
 
 function searchUser() {
+    list.innerHTML = "Carregando ...";
     var user = document.querySelector('input#inUser');
     axios.get('https://api.github.com/users/'+user.value+'/repos')
     .then(function(response){
@@ -11,6 +12,7 @@ function searchUser() {
     })
     .catch(function(error){
         alert('User not found');
+        list.innerHTML = "Tente novamente";
     });
     user.focus();
 }
