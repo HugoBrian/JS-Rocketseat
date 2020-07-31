@@ -1,10 +1,17 @@
-import {Usuario as ClasseUsuario} from './funcoes';
+// Exercicios: Modulo 02
+/*
+import Usuario, {idade as IdadeUsuario} from './funcoes';
 
-const usuario = new ClasseUsuario;
+Usuario.info();
+console.log(IdadeUsuario)
 
-console.log(usuario.info());
+
+import ClasseUsuario from './funcoes';
+
+ClasseUsuario.info();
 
 
 import {idade} from './funcoes';
 
 console.log(idade);
+*/
